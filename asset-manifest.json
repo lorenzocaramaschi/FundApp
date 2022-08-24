@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FundApp/static/css/main.d72706c3.css",
+    "main.js": "/FundApp/static/js/main.77ed828d.js",
+    "static/js/787.9991e351.chunk.js": "/FundApp/static/js/787.9991e351.chunk.js",
+    "static/media/Bebas Neue Pro Bold.otf": "/FundApp/static/media/Bebas Neue Pro Bold.7922ce4fae889747f968.otf",
+    "index.html": "/FundApp/index.html",
+    "main.d72706c3.css.map": "/FundApp/static/css/main.d72706c3.css.map",
+    "main.77ed828d.js.map": "/FundApp/static/js/main.77ed828d.js.map",
+    "787.9991e351.chunk.js.map": "/FundApp/static/js/787.9991e351.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d72706c3.css",
+    "static/js/main.77ed828d.js"
+  ]
+}
