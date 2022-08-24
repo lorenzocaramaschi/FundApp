@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue';
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./Bebas\ Neue\ Pro\ Bold.otf');
+}
+
+body {
+    background-color: #E9E9EB;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-botones{        
+    margin: auto;
+}
+
+button{
+    background-color: #EF4B4C;
+    color: #E9E9EB;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 30%;
+    margin: 5px 10px;
+    font-size: 1.2rem;    
+}
+
+a li, span {
+    margin: 5px auto;
+    font-size: 1.5rem;
+    border-bottom: 1px #EF4B4C solid;
+    width: 60%;
+    color: #E9E9EB;
+}
+
+header {
+    padding: 5px 20px;
+    background-color: #42506b;
+    color: #E9E9EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header i,
+header img {
+    cursor: pointer;
+
+}
+
+header i {
+    text-shadow: 2px 2px #3e619b;
+}
+
+header .carrito {
+    background: #42506b;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    width: 20rem;
+    height: 100%;
+    transition: all 1s ease;
+    z-index: 11;
+    color: #E9E9EB;
+    border-left: #3e619b 5px solid;
+    text-align: center;
+}
+
+header .opciones h3,
+header .carrito h3 {
+    font-size: 2rem;
+    border-bottom: 2px #EF4B4C solid;
+    width: 60%;
+    margin: 4.25px auto auto auto;
+    border-radius: 18px;
+}
+
+header .opciones {
+    background: #42506b;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 20rem;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: 11;
+    color: #E9E9EB;
+    border-right: #3e619b 5px solid;
+    text-align: center;
+}
+
+.cerrar-carrito,
+.cerrar-opciones {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.desactivar-carrito {
+    right: -100% !important;
+}
+
+.desactivar-opciones {
+    left: -100% !important;
+}
