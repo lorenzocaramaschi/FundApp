@@ -71,7 +71,7 @@ header .carrito {
     background: #42506b;
     position: fixed;
     top: 0;
-    right: 0%;
+    right: -100%;
     width: 20rem;
     height: 100%;
     transition: all 1s ease;
@@ -94,7 +94,7 @@ header .opciones {
     background: #42506b;
     position: fixed;
     top: 0;
-    left: 0%;
+    left: -100%;
     width: 20rem;
     height: 100%;
     transition: all 0.5s ease;
@@ -114,9 +114,9 @@ header .opciones {
 }
 
 .desactivar-carrito {
-    right: -100% !important;
+    right: 0 !important;
 }
 
 .desactivar-opciones {
-    left: -100% !important;
+    left: 0 !important;
 }

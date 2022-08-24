@@ -3,16 +3,16 @@ import React, { useRef } from 'react'
 const NavBar = () => {
 
     const cerrarMenu = () => {
-        cerrarOpciones.current.classList.add("desactivar-opciones")
+        cerrarOpciones.current.classList.remove("desactivar-opciones")
     }
     const cerrarCarrito = () => {
-        cerrarCarritox.current.classList.add("desactivar-opciones")
+        cerrarCarritox.current.classList.remove("desactivar-carrito")
     }
     const abrirCarrito = () => {
-        cerrarCarritox.current.classList.remove("desactivar-opciones")
+        cerrarCarritox.current.classList.add("desactivar-carrito")
     }
     const abrirMenu = () => {
-        cerrarOpciones.current.classList.remove("desactivar-opciones")
+        cerrarOpciones.current.classList.add("desactivar-opciones")
     }
 
     const cerrarOpciones = useRef(null)
