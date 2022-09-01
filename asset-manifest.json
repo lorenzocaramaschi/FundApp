@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FundApp/static/css/main.1d1584d7.css",
-    "main.js": "/FundApp/static/js/main.11c15cff.js",
+    "main.css": "/FundApp/static/css/main.b274162b.css",
+    "main.js": "/FundApp/static/js/main.70f732f9.js",
     "static/js/787.9991e351.chunk.js": "/FundApp/static/js/787.9991e351.chunk.js",
     "static/media/Bebas Neue Pro Bold.otf": "/FundApp/static/media/Bebas Neue Pro Bold.7922ce4fae889747f968.otf",
     "index.html": "/FundApp/index.html",
-    "main.1d1584d7.css.map": "/FundApp/static/css/main.1d1584d7.css.map",
-    "main.11c15cff.js.map": "/FundApp/static/js/main.11c15cff.js.map",
+    "main.b274162b.css.map": "/FundApp/static/css/main.b274162b.css.map",
+    "main.70f732f9.js.map": "/FundApp/static/js/main.70f732f9.js.map",
     "787.9991e351.chunk.js.map": "/FundApp/static/js/787.9991e351.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d1584d7.css",
-    "static/js/main.11c15cff.js"
+    "static/css/main.b274162b.css",
+    "static/js/main.70f732f9.js"
   ]
 }
