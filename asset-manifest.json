@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FundApp/static/css/main.b274162b.css",
-    "main.js": "/FundApp/static/js/main.70f732f9.js",
-    "static/js/787.9991e351.chunk.js": "/FundApp/static/js/787.9991e351.chunk.js",
-    "static/media/Bebas Neue Pro Bold.otf": "/FundApp/static/media/Bebas Neue Pro Bold.7922ce4fae889747f968.otf",
-    "index.html": "/FundApp/index.html",
-    "main.b274162b.css.map": "/FundApp/static/css/main.b274162b.css.map",
-    "main.70f732f9.js.map": "/FundApp/static/js/main.70f732f9.js.map",
-    "787.9991e351.chunk.js.map": "/FundApp/static/js/787.9991e351.chunk.js.map"
+    "main.css": "/FundApp-Caramaschi/static/css/main.1261605f.css",
+    "main.js": "/FundApp-Caramaschi/static/js/main.11dc2ca2.js",
+    "static/js/787.9991e351.chunk.js": "/FundApp-Caramaschi/static/js/787.9991e351.chunk.js",
+    "static/media/Bebas Neue Pro Bold.otf": "/FundApp-Caramaschi/static/media/Bebas Neue Pro Bold.7922ce4fae889747f968.otf",
+    "index.html": "/FundApp-Caramaschi/index.html",
+    "main.1261605f.css.map": "/FundApp-Caramaschi/static/css/main.1261605f.css.map",
+    "main.11dc2ca2.js.map": "/FundApp-Caramaschi/static/js/main.11dc2ca2.js.map",
+    "787.9991e351.chunk.js.map": "/FundApp-Caramaschi/static/js/787.9991e351.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b274162b.css",
-    "static/js/main.70f732f9.js"
+    "static/css/main.1261605f.css",
+    "static/js/main.11dc2ca2.js"
   ]
 }
