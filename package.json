@@ -2,7 +2,7 @@
   "name": "ecommerce-caramaschi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lorenzocaramaschi.github.io/FundApp/",
+  "homepage": "https://lorenzocaramaschi.github.io/FundApp-Caramaschi/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
