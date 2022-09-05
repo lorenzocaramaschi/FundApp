@@ -1,11 +1,12 @@
 import './itemListContainer.css'
 import 'animate.css'
+import ContadorItems from '../itemCount/itemCount'
+
+
 
 const ItemListContainer = ({ greeting }) => {
-    return (
-        <div className="titulo-prueba">
-            <div className='animate__animated animate__fadeInUp'>{greeting}</div>
-        </div>
+    return (        
+            <ContadorItems stock={10}/>        
     )
 }
 
