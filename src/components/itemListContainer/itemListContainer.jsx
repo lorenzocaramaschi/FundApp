@@ -1,12 +1,33 @@
 import './itemListContainer.css'
 import 'animate.css'
-import ContadorItems from '../itemCount/itemCount'
+import { data } from '../mockData'
+import { useEffect, useState } from 'react'
+import ItemList from '../itemList/itemList'
+
+
 
 
 
 const ItemListContainer = ({ greeting }) => {
-    return (        
-            <ContadorItems stock={10}/>        
+
+    const [listaProductos, setListaProductos] = useState([])
+
+    useEffect(() => {
+        obtenerProductos.then((response)=>{
+            setListaProductos(response)
+        })
+    }, [])
+
+    const obtenerProductos =
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(data)
+            }, 2000)
+        })
+
+
+    return (
+        <ItemList lista={listaProductos} />
     )
 }
 
