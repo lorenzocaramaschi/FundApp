@@ -3,63 +3,81 @@ export const data = [
         id: "1",
         titulo: "Funda Roja",
         precio: 1000,
-        imagen:"https://ar.oneclickstore.com/wp-content/uploads/2021/04/12_Pro_Max_Silicone_Case_Red.jpg",
-        categoria: "Solidas" 
+        imagen: "https://i.imgur.com/BAbwsax.png",
+        categoria: "Solidas" ,
+        stock: 10,
+        descripcion: "Funda de color Rojo para tu dispositivo movil"
     },
     {
         id: "2",
-        titulo: "Funda Blanca",
+        titulo: "Funda Amarilla",
         precio: 500,
-        imagen:"https://lerevendo.com/wp-content/uploads/2021/04/MHLE3.jpeg",
-        categoria: "Solidas" 
+        imagen:"https://i.imgur.com/3WZm77k.png",
+        categoria: "Solidas" ,
+        stock: 12,
+        descripcion: "Funda de color amarillo para tu dispositivo movil"
     },
     {
         id: "3",
-        titulo: "Funda Negra",
+        titulo: "Funda Celeste",
         precio: 800,
-        imagen:"https://cdn-ipoint.waugi.com.ar/23589-large_default/funda-silicona-para-iphone-13-pro-max-con-magsafe-midnight.jpg",
-        categoria: "Solidas" 
+        imagen:"https://i.imgur.com/te4rTPy.png",
+        categoria: "Solidas" ,
+        stock: 15,
+        descripcion: "Funda de color celeste para tu dispositivo movil"
     },
     {
         id: "4",
-        titulo: "Funda Alce",
+        titulo: "Funda Dibujos I",
         precio: 1200,
-        imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXj6RYJTpT6Om9pwrIs5Nw7NThfwkEE_XcQ&usqp=CAU",
-        categoria: "Dibujada" 
+        imagen:"https://i.imgur.com/zoQl4Tt.png",
+        categoria: "Dibujadas" ,
+        stock: 22,
+        descripcion: "Funda con los mejores dibujos para tu dispositivo movil"
     },
     {
         id: "5",
-        titulo: "Funda Ananá",
+        titulo: "Funda Dibujos II",
         precio: 1350,
-        imagen:"https://rlv.zcache.es/funda_para_samsung_galaxy_de_case_mate_esbozo_dibujado_a_mano_con_pinas_de_epoca_seda-r52bf78a4d63e462fa2a8e19d678b8585_erggp_307.jpg?rlvnet=1",
-        categoria: "Dibujada" 
+        imagen:"https://i.imgur.com/9iODzmZ.png",
+        categoria: "Dibujadas" ,
+        stock: 18,
+        descripcion: "Funda con los mejores dibujos para tu dispositivo movil"
     },
     {
         id: "6",
-        titulo: "Funda Estrellas",
+        titulo: "Funda Dibujos III",
         precio: 1100,
-        imagen:"https://m.media-amazon.com/images/I/61k0MMGPIuL._AC_SY550_.jpg",
-        categoria: "Dibujada" 
+        imagen:"https://i.imgur.com/yTwwuzl.png",
+        categoria: "Dibujadas" ,
+        stock: 32,
+        descripcion: "Funda con los mejores dibujos con una temática espacial para tu dispositivo movil"
     },
     {
         id: "7",
-        titulo: "Funda con Stickers",
+        titulo: "Funda Jurassic Park",
         precio: 1500,
-        imagen:"https://caseland.com.ar/post/jpg/stickers-good-vibes-negro.jpg",
-        categoria: "Stickers" 
+        imagen:"https://i.imgur.com/roofvp9.png",
+        categoria: "Tematicas" ,
+        stock: 56,
+        descripcion: "Funda con temática de Jurassic Park para tu dispositivo movil"
     },
     {
         id: "8",
-        titulo: "Funda con Stickers vol. 2",
+        titulo: "Funda Star Wars",
         precio: 1300,
-        imagen:"https://http2.mlstatic.com/D_NQ_NP_974540-MLA50726938218_072022-V.jpg",
-        categoria: "Stickers" 
+        imagen:"https://i.imgur.com/Qbe4XRB.png",
+        categoria: "Tematicas" ,
+        stock: 78,
+        descripcion: "Funda con temática de Star Wars para tu dispositivo movil"
     },
     {
         id: "9",
-        titulo: "Funda con Stickers vol. 3",
+        titulo: "Funda Volver al Futuro",
         precio: 1600,
-        imagen:"https://euquefiz.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/c/a/capinha_stickers.jpg",
-        categoria: "Stickers" 
+        imagen:"https://i.imgur.com/qApxb6Y.png",
+        categoria: "Tematicas" ,
+        stock: 29,
+        descripcion: "Funda con temática de Volver al Futuro para tu dispositivo movil"
     }
 ]

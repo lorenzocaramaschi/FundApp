@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #E9E9EB;
-    text-align: center;
-    margin: 10px;
+    background-color: white;
+    text-align: center;    
     justify-content: center;
     transition: all 0.5s ease;
 }

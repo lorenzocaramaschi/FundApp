@@ -1,0 +1,23 @@
+body    {
+    color: #42506b;
+}
+
+.card {
+    position: initial;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.contenedor-detalles{
+    padding: 20px 20px;
+}
+
+.contenedor-contador-items{
+    margin: 0;
+}

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const MenuWidget = () => {
     const cerrarMenu = () => {
@@ -17,10 +18,10 @@ const MenuWidget = () => {
                 <i onClick={cerrarMenu} className='bx bx-x cerrar-opciones'></i>
                 <h3>FundApp</h3>
                 <ul>
-                    <a href='#inicio'><li>Inicio</li></a>
-                    <a href='#nosotros'><li>Nosotros</li></a>
-                    <a href='#nosotros' onClick={() => { console.log("Acá va a ir un dropdown con algunas categorías!") }}><li>Fundas</li></a>
-                    <a href='#contacto'><li>Contactos</li></a>
+                    <Link to={"/"}><li>Inicio</li></Link>
+                    <Link to={"/nosotros"}><li>Nosotros</li></Link>
+                    <Link to={"/"}><li>Fundas</li></Link>
+                    <Link to={"/contactos"}><li>Contactos</li></Link>
                 </ul>
             </div>
         </>

@@ -11,7 +11,7 @@ const ContadorItems = ({ stock }) => {
             <h3>Hay {stockActual} en stock de este producto.</h3>
             <div className='contador-items'>
                 <i onClick={() => {
-                    if (itemsCantidad === 10) {
+                    if (itemsCantidad === stock) {
                         return;
                     }
                     else {
