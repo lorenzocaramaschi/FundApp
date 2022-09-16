@@ -3,24 +3,34 @@ import 'animate.css'
 import { data } from '../mockData'
 import { useEffect, useState } from 'react'
 import ItemList from '../itemList/itemList'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
+
 
 
 const ItemListContainer = () => {
 
-    const [listaProductos, setListaProductos] = useState([])  
-    const [loading, setLoading] = useState(false) 
-
-    useEffect(() => {               
-        obtenerProductos()       
-    }, [])
+    const [listaProductos, setListaProductos] = useState([])
+    const [loading, setLoading] = useState(false)
+    const categoryName = useParams();
 
     const obtenerProductos = async () => {
+
         await new Promise((resolve, reject) => {
             setLoading(true)
             setTimeout(() => {
-                resolve(data)
+
+                console.log(categoryName)
+
+                if (Object.keys(categoryName).length===0) {
+                    resolve(data)
+                }
+                else {
+                    const dataFilter = data.filter(product => product.categoria === categoryName.category)
+                    resolve(dataFilter)
+                }
+
             }, 2000)
+
         })
 
             .then((response) => {
@@ -28,6 +38,12 @@ const ItemListContainer = () => {
                 setLoading(false)
             })
     }
+
+    useEffect(() => {
+        obtenerProductos()
+    }, [categoryName])
+
+
 
 
     return (

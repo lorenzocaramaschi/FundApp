@@ -4,7 +4,7 @@ export const data = [
         titulo: "Funda Roja",
         precio: 1000,
         imagen: "https://i.imgur.com/BAbwsax.png",
-        categoria: "Solidas" ,
+        categoria: "solidas" ,
         stock: 10,
         descripcion: "Funda de color Rojo para tu dispositivo movil"
     },
@@ -13,7 +13,7 @@ export const data = [
         titulo: "Funda Amarilla",
         precio: 500,
         imagen:"https://i.imgur.com/3WZm77k.png",
-        categoria: "Solidas" ,
+        categoria: "solidas" ,
         stock: 12,
         descripcion: "Funda de color amarillo para tu dispositivo movil"
     },
@@ -22,7 +22,7 @@ export const data = [
         titulo: "Funda Celeste",
         precio: 800,
         imagen:"https://i.imgur.com/te4rTPy.png",
-        categoria: "Solidas" ,
+        categoria: "solidas" ,
         stock: 15,
         descripcion: "Funda de color celeste para tu dispositivo movil"
     },
@@ -31,7 +31,7 @@ export const data = [
         titulo: "Funda Dibujos I",
         precio: 1200,
         imagen:"https://i.imgur.com/zoQl4Tt.png",
-        categoria: "Dibujadas" ,
+        categoria: "dibujadas" ,
         stock: 22,
         descripcion: "Funda con los mejores dibujos para tu dispositivo movil"
     },
@@ -40,7 +40,7 @@ export const data = [
         titulo: "Funda Dibujos II",
         precio: 1350,
         imagen:"https://i.imgur.com/9iODzmZ.png",
-        categoria: "Dibujadas" ,
+        categoria: "dibujadas" ,
         stock: 18,
         descripcion: "Funda con los mejores dibujos para tu dispositivo movil"
     },
@@ -49,7 +49,7 @@ export const data = [
         titulo: "Funda Dibujos III",
         precio: 1100,
         imagen:"https://i.imgur.com/yTwwuzl.png",
-        categoria: "Dibujadas" ,
+        categoria: "dibujadas" ,
         stock: 32,
         descripcion: "Funda con los mejores dibujos con una temática espacial para tu dispositivo movil"
     },
@@ -58,7 +58,7 @@ export const data = [
         titulo: "Funda Jurassic Park",
         precio: 1500,
         imagen:"https://i.imgur.com/roofvp9.png",
-        categoria: "Tematicas" ,
+        categoria: "tematicas" ,
         stock: 56,
         descripcion: "Funda con temática de Jurassic Park para tu dispositivo movil"
     },
@@ -67,7 +67,7 @@ export const data = [
         titulo: "Funda Star Wars",
         precio: 1300,
         imagen:"https://i.imgur.com/Qbe4XRB.png",
-        categoria: "Tematicas" ,
+        categoria: "tematicas" ,
         stock: 78,
         descripcion: "Funda con temática de Star Wars para tu dispositivo movil"
     },
@@ -76,7 +76,7 @@ export const data = [
         titulo: "Funda Volver al Futuro",
         precio: 1600,
         imagen:"https://i.imgur.com/qApxb6Y.png",
-        categoria: "Tematicas" ,
+        categoria: "tematicas" ,
         stock: 29,
         descripcion: "Funda con temática de Volver al Futuro para tu dispositivo movil"
     }

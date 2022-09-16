@@ -2,8 +2,7 @@ import './item-list.css'
 import Item from "../item/item"
 import { Link } from 'react-router-dom'
 
-const ItemList = ({ lista }) => {
-    console.log(lista)
+const ItemList = ({ lista }) => {   
 
     return (
         <div className='contenedorProductos'>

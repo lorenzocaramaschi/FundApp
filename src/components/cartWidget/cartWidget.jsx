@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import Comprar from "../botonComprar/botonComprar";
+
 
 const CartWidget = () => {   
     const cerrarCarrito = () => {
@@ -16,8 +18,8 @@ const CartWidget = () => {
                 <h3>Tu carrito</h3>
                 <span>Total: $0</span>
                 <div className='contenedor-botones'>
-                    <button onClick={() => { console.log("Vaciaste el carrito!") }}>Vaciar</button>
-                    <button onClick={() => { console.log("Compraste los productos!") }}>Comprar</button>
+                    <button>Vaciar</button>
+                    <Comprar/>
                 </div>
 
             </div>
