@@ -7,6 +7,7 @@ import Contactos from "./components/contactos/contactos";
 import ItemDetailContainer from "./components/itemDetailContainer/itemDetailContainer";
 import CartProvider from "./context/cartProvider";
 import Footer from "./components/footer/footer";
+import Cart from "./components/cart/cart";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/FundApp-Caramaschi/" element={<ItemListContainer/>}/>
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contactos" element={<Contactos />} />
+          <Route path="/carrito" element={<Cart />} />
           <Route path="/:categoria/:titulo" element={<ItemDetailContainer/>} />
           <Route path= "/categoria/:category" element={<ItemListContainer/>}/>
         </Routes>

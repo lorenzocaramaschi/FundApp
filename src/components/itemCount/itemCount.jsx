@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './item-count.css'
 
-const ContadorItems = ({ stock }) => {
+const ContadorItems = ({stock, setItemsCantidad, setStockActual, itemsCantidad, stockActual }) => {
 
-    const [itemsCantidad, setItemsCantidad] = useState(0)
-    const [stockActual, setStockActual] = useState(stock)   
+       
 
     return (
         <div className='contenedor-contador-items'>
@@ -15,8 +14,8 @@ const ContadorItems = ({ stock }) => {
                         return;
                     }
                     else {
-                        setItemsCantidad(itemsCantidad + 1)
-                        setStockActual(stockActual - 1)
+                        setItemsCantidad((itemsCantidad)=>itemsCantidad + 1)
+                        setStockActual((stockActual)=>stockActual - 1)
                     }
                 }} className='bx bx-plus'></i>
                 <div>{itemsCantidad}</div>
@@ -25,8 +24,8 @@ const ContadorItems = ({ stock }) => {
                         return;
                     }
                     else {
-                        setItemsCantidad(itemsCantidad - 1)
-                        setStockActual(stockActual + 1)
+                        setItemsCantidad((itemsCantidad)=>itemsCantidad - 1)
+                        setStockActual((stockActual)=>stockActual + 1)
                     }
 
                 }} className='bx bx-minus' ></i>
