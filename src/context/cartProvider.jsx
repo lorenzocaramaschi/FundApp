@@ -31,13 +31,15 @@ const CartProvider = ({ children }) => {
 
     }
 
-    const clear = () => {
+    const clear = () => {    
         setCart([])
+        console.log(cart)
     }
 
     const RemoveItem = (id) => {
         let itemBorrado = cart.findIndex((el) => el.id === id)
         cart.splice(itemBorrado, 1)
+        console.log(cart);
     }
 
 

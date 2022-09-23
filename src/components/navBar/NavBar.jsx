@@ -3,6 +3,7 @@ import CartWidget from '../cartWidget/cartWidget'
 import MenuWidget from '../menuWidget/menuWidget'
 
 
+
 const NavBar = () => {
 
 
@@ -11,8 +12,8 @@ const NavBar = () => {
             <MenuWidget />
             <Link to={"/"}>
                 <img width={"50"} height={"50"} src={require('../../Logo FundApp.png')} alt="Logo FundApp" />
-            </Link>
-            <CartWidget />
+            </Link>    
+            <CartWidget></CartWidget>        
         </header>
     )
 

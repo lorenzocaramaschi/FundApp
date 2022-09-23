@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './item-count.css'
 
 const ContadorItems = ({stock, setItemsCantidad, setStockActual, itemsCantidad, stockActual }) => {
