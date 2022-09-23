@@ -1,9 +1,9 @@
 import './itemListContainer.css'
 import 'animate.css'
-import { data } from '../mockData'
 import { useEffect, useState } from 'react'
 import ItemList from '../itemList/itemList'
 import { NavLink, useParams } from 'react-router-dom'
+import { getFirestore, getDocs, collection } from "firebase/firestore"
 
 
 
@@ -14,29 +14,16 @@ const ItemListContainer = () => {
     const categoryName = useParams();
 
     const obtenerProductos = async () => {
-
-        await new Promise((resolve, reject) => {
-            setLoading(true)
-            setTimeout(() => {
-
-                console.log(categoryName)
-
-                if (Object.keys(categoryName).length===0) {
-                    resolve(data)
-                }
-                else {
-                    const dataFilter = data.filter(product => product.categoria === categoryName.category)
-                    resolve(dataFilter)
-                }
-
-            }, 2000)
-
+        setLoading(true)
+        const db = getFirestore()
+        const querySnapshot = await collection(db, 'items')
+        getDocs(querySnapshot).then(res => {
+            const data = res.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() }
+            })           
+            setListaProductos(data)
+            setLoading(false)
         })
-
-            .then((response) => {
-                setListaProductos(response)
-                setLoading(false)
-            })
     }
 
     useEffect(() => {

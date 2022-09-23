@@ -1,4 +1,5 @@
 const Comprar = () => {
+
     return (
         <button>Comprar</button>
     )

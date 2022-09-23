@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cartProvider";
 import Comprar from "../botonComprar/botonComprar";
 import ContadorItems from "../itemCount/itemCount";
 import './item-detail.css'
+
 
 const ItemDetail = ({ product }) => {
 
     const [itemsCantidad, setItemsCantidad] = useState(0)
     const [stockActual, setStockActual] = useState(product.stock)
+    const { AddToCart } = useContext(CartContext)    
+
+    const onAdd = (product) => {        
+        AddToCart(product, itemsCantidad)
+    }
 
     return (
         <div className="contenedor-detalles">
@@ -22,8 +29,10 @@ const ItemDetail = ({ product }) => {
                             <p className="card-text">{product.descripcion}</p>
                             <p className="card-text"><small className="text-muted">{product.categorias}</small></p>
                             <div className="info-detalles">
-                                <ContadorItems stock={product.stock} setItemsCantidad={setItemsCantidad} setStockActual={setStockActual} stockActual = {stockActual} itemsCantidad={itemsCantidad} />                                
-                                <Link to={"/carrito"}><Comprar /></Link>
+                                <ContadorItems stock={product.stock} setItemsCantidad={setItemsCantidad} setStockActual={setStockActual} stockActual={stockActual} itemsCantidad={itemsCantidad} />
+                                <div onClick={() => { onAdd(product) }}>
+                                    <Link to={"/carrito"}><Comprar/></Link>
+                                </div>
                             </div>
                         </div>
                     </div>
