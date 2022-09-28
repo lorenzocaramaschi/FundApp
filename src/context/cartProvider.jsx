@@ -20,8 +20,8 @@ const CartProvider = ({ children }) => {
         }
         else {
             setCart([...cart, { ...item, cantidad }])
-            localStorage.setItem("carro", JSON.stringify(cart))     
-            console.log(cart)       
+            localStorage.setItem("carro", JSON.stringify(cart))
+            console.log(cart)
         }
 
     }
@@ -31,15 +31,19 @@ const CartProvider = ({ children }) => {
 
     }
 
-    const clear = () => {    
+    const clear = () => {
         setCart([])
         console.log(cart)
     }
 
-    const RemoveItem = (id) => {
-        let itemBorrado = cart.findIndex((el) => el.id === id)
-        cart.splice(itemBorrado, 1)
-        console.log(cart);
+    const RemoveItem = (product) => {
+        let nuevoArreglo = []
+        cart.forEach((producto) => {
+            if (producto.id !== product) {
+                nuevoArreglo.push(producto)
+            }
+        })
+        setCart(nuevoArreglo)
     }
 
 

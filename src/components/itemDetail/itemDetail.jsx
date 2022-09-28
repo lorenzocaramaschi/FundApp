@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { CartContext } from "../../context/cartProvider";
 import Comprar from "../botonComprar/botonComprar";
 import ContadorItems from "../itemCount/itemCount";
@@ -10,9 +11,9 @@ const ItemDetail = ({ product }) => {
 
     const [itemsCantidad, setItemsCantidad] = useState(0)
     const [stockActual, setStockActual] = useState(product.stock)
-    const { AddToCart } = useContext(CartContext)    
+    const { AddToCart } = useContext(CartContext)
 
-    const onAdd = (product) => {        
+    const onAdd = (product) => {
         AddToCart(product, itemsCantidad)
     }
 
@@ -30,9 +31,17 @@ const ItemDetail = ({ product }) => {
                             <p className="card-text"><small className="text-muted">{product.categoryId}</small></p>
                             <div className="info-detalles">
                                 <ContadorItems stock={product.stock} setItemsCantidad={setItemsCantidad} setStockActual={setStockActual} stockActual={stockActual} itemsCantidad={itemsCantidad} />
-                                <div onClick={() => { onAdd(product) }}>
-                                    <Link to={"/carrito"}><Comprar/></Link>
+                                <div onClick={() => itemsCantidad === 0 ? Swal.fire({
+                title: 'Selecciona una cantidad!',
+                text: 'No puedes comprar 0 de este item',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            }) : onAdd(product)}>
+                                    <Comprar />
                                 </div>
+                                <Link to={"/carrito"}>
+                                    <button>Terminar Compra</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
