@@ -12,7 +12,7 @@ const ItemDetail = ({ product }) => {
     const [itemsCantidad, setItemsCantidad] = useState(0)
     const [stockActual, setStockActual] = useState(product.stock)
     const { AddToCart } = useContext(CartContext)
-
+    console.log(product)
     const onAdd = (product) => {
         AddToCart(product, itemsCantidad)
     }

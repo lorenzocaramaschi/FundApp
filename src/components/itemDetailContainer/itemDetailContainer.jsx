@@ -14,32 +14,27 @@ const ItemDetailContainer = () => {
         const db = getFirestore()
         const querySnapshot = await collection(db, 'items')
 
-        if(id){
+        if (id) {
             const queryFilter = query(
                 querySnapshot,
-                where("categoryId","==",id)
+                where("title", "==", id.titulo)
             )
             getDocs(queryFilter).then(res => {
                 const data = res.docs.map((doc) => {
                     return { id: doc.id, ...doc.data() }
                 })
+                console.log(...data)
                 const dataFilter = data.filter((doc) => doc.title === id.titulo)
-                setProduct(...dataFilter)
+                console.log(id.titulo)
+                setProduct(...data)
+                
             })
                 .catch((err) => {
-                    console.log(err)                
+                    console.log(err)
                 })
-        
-        }
-        getDocs(querySnapshot).then(res => {
-            const data = res.docs.map((doc) => {
-                return { id: doc.id, ...doc.data() }
-            })            
-            setProduct(...data)
-        })
-            .catch((err) => {
-                console.log(err)                
-            })
+
+        }        
+
     }
 
 
