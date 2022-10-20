@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/cartProvider"
-import './cart-widget.css'
 
 
 const CartWidget = () => {
@@ -12,7 +11,7 @@ const CartWidget = () => {
   },[cart])
 
   return (
-   <Link className="cart-widget-ii" to={"/carrito"}><i className='cart-widget bx bxs-shopping-bag'></i><p>{cart.length}</p></Link> 
+   <Link className="cart-widget-ii" to={"/carrito"}><i className='cart-widget bx bxs-shopping-bag'></i><p className="contador-carro">{cart.length}</p></Link> 
   )
 }
 

@@ -1,9 +1,9 @@
-import './itemListContainer.css'
 import 'animate.css'
 import { useEffect, useState } from 'react'
 import ItemList from '../itemList/itemList'
 import { NavLink, useParams } from 'react-router-dom'
 import { getFirestore, getDocs, collection } from "firebase/firestore"
+import Loader from '../loader/loader'
 
 
 
@@ -49,7 +49,7 @@ useEffect(() => {
 
 return (
     <NavLink to={'/'} style={{ textDecoration: 'none', color: '#42506b' }}>
-        {loading ? (<div className="lds-ring"><div></div><div></div><div></div><div></div></div>) : <ItemList lista={listaProductos} />}
+        {loading ? (<Loader/>) : <ItemList lista={listaProductos} />}
     </NavLink>
 
 )

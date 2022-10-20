@@ -14,17 +14,21 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <NavBar></NavBar>
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/FundApp-Caramaschi/" element={<ItemListContainer/>}/>
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contactos" element={<Contactos />} />
-          <Route path="/carrito" element={<Cart />} />
-          <Route path="/:categoria/:titulo" element={<ItemDetailContainer/>} />
-          <Route path= "/categoria/:category" element={<ItemListContainer/>}/>
-        </Routes>
-        <Footer></Footer>
+        <div className="contenedor">
+          <NavBar></NavBar>
+          <main>
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/FundApp-Caramaschi/" element={<ItemListContainer />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/contactos" element={<Contactos />} />
+              <Route path="/carrito" element={<Cart />} />
+              <Route path="/:categoria/:titulo" element={<ItemDetailContainer />} />
+              <Route path="/categoria/:category" element={<ItemListContainer />} />
+            </Routes>
+          </main>
+          <Footer></Footer>
+        </div>
       </BrowserRouter>
     </CartProvider>
 

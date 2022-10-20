@@ -1,31 +1,33 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/cartProvider"
-import { collection, addDoc, getFirestore, updateDoc, doc } from 'firebase/firestore'
+import { collection, addDoc, getFirestore } from 'firebase/firestore'
 import moment from "moment/moment"
 import Swal from "sweetalert2"
+import illustracion from '../../empty-cart.png'
 
 const Cart = () => {
 
+
+
   const { clear, RemoveItem, cart } = useContext(CartContext)
-  
+  const [order, setOrder] = useState({
+    buyer: {
+      name: "",
+      phone: 0,
+      email: "",
+      direccion: ""
+    },
+    items: cart,
+    total: cart.reduce((acc, item) =>
+      acc = acc + (item.price * item.cantidad)
+      , 0),
+    date: moment().format()
+  })
+
   const db = getFirestore()
 
-  const createOrder = () => { 
-    const order = {
-      buyer: {
-        name: "Lorenzo",
-        phone: 11111,
-        email: "aaaa@test.com"
-      },
-      items: cart,
-      total: cart.reduce((acc, item) =>
-        acc = acc + (item.price * item.cantidad)
-        , 0),
-      date: moment().format()
-    }
-
-
+  const createOrder = () => {
     const query = collection(db, 'orders')
     addDoc(query, order)
       .then(({ id }) => {
@@ -48,65 +50,68 @@ const Cart = () => {
       ))
   }
 
-  /* const updateOrder = () => {
-    const idOrder = "1D9sEWCpets7c4MG4Uel"
-    const order = {
+  const HandleInputChange = (e) => {
+    console.log(e.target);
+    setOrder({
+      ...order,
       buyer: {
-        name: "Lorenzo",
-        phone: 11111,
-        email: "aaaa@test.com"
-      },
-      items: cart.pop(),
-      total: cart.reduce((acc, item) =>
-        acc = acc + (item.price * item.cantidad)
-        , 0),
-      date: moment().format()
-    }
-
-    
-    const queryUpdate = doc(db, 'orders', idOrder)
-    updateDoc(queryUpdate, order)
-    .then((res)=>{
-      console.log(res)
+        ...order.buyer,
+        [e.target.name]: e.target.value
+      }
     })
-    .catch((err)=>{
-      console.log(err)
-    }) 
-
-  } */
-
-
+    console.log(order);
+  }
 
   return (
     <div>
-      <h1>Tu carrito:</h1>
-      {cart.length === 0 ? (<div>
-        <h2>No hay productos en el carrito</h2>
-        <Link to={"/"}><button>Comprar</button></Link>
-      </div>
+      {cart.length === 0 ? (
+        <div className="contenedor-vacio">
+          <img className="imagen-carrito-vacio" src={illustracion} alt="carrito vacío" />
+          <p className="texto-carrito-vacio">¡Tu carrito esta vacío!
+            ¿Que estás esperando? Andá a la tienda para encontrar
+            las mejores fundas del mercado</p>
+          <Link to={"/"}><button className="ir-a-tienda"><i class='bx bx-left-arrow-alt'></i>Ir a la tienda</button></Link>
+        </div>
 
       ) : (
         <div>
           {cart.map((item) => (
-            <div key={item.id}>
-              <h4>{item.title}</h4>
-              <img width={"125px"} height={"125px"} src={item.image} alt={item.title} />
-              <p>{item.price}</p>
-              <p>{item.cantidad}</p>
-              <div onClick={() => RemoveItem(item.id)}>Remover Item</div>
+            <div className="contenedor-card" key={item.id}>
+              <img className="imagen-card" src={item.image} alt={item.title} />
+              <div className="info-card">
+                <h4 className="titulo-card">{item.title}</h4>
+                <span className="cantidad-card">Cantidad: {item.cantidad}</span>
+                <button className="btn-eliminar" onClick={() => RemoveItem(item.id)}><i class='bx bx-trash'></i><span>Eliminar</span></button>
+              </div>
+              <span className="precio-card">${item.price}</span>
             </div>
           ))}
-          <button onClick={createOrder}>Crear orden</button>
-          {/* <button onClick={updateOrder}>Actualizar orden</button> */}
-        </div>
 
+          <div className="total-carrito">
+            Total con IVA ${cart.reduce((acc, item) =>
+              acc = acc + (item.price * item.cantidad)
+              , 0) * 1.21}
+          </div>
+
+          <form className="formulario-orden" action="post">
+            <h3>Completá con tus datos</h3>
+            <div><i class='bx bxs-user' ></i><input value={order.buyer.name} required placeholder="Nombre y apellido" type="text" name="name" id="name" onChange={HandleInputChange} /></div>
+            <div><i class='bx bx-envelope' ></i><input value={order.buyer.email} required placeholder="Email" type="email" name="email" id="email" onChange={HandleInputChange} /></div>
+            <div><i class='bx bxs-phone' ></i><input value={order.buyer.phone} required placeholder="Número telefónico" type="number" name="phone" id="phone" onChange={HandleInputChange} /></div>
+            <div><i class='bx bxs-map'></i><input value={order.buyer.direccion} required placeholder="Dirección" type="text" name="direccion" id="direccion" onChange={HandleInputChange} /></div>
+          </form>
+
+          <div className="botones-orden">
+            <button className="vaciar-carrito" onClick={clear}>Vaciar Carrito</button>
+            <button className="crear-orden" type="submit" onClick={createOrder}>Crear orden</button>
+          </div>
+
+
+
+        </div>
       )}
 
-      <button onClick={clear}>Vaciar Carrito</button>
 
-      <div>Total: {cart.reduce((acc, item) =>
-        acc = acc + (item.price * item.cantidad)
-        , 0)}</div>
 
     </div>
   )
