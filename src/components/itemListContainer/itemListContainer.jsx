@@ -40,9 +40,9 @@ const ItemListContainer = () => {
   }, [categoryName]);
 
   return (
-    <NavLink to={"/"} style={{ textDecoration: "none", color: "#42506b" }}>
+    <>
       {loading ? <Loader /> : <ItemList lista={listaProductos} />}
-    </NavLink>
+    </>
   );
 };
 

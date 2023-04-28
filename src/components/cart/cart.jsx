@@ -73,7 +73,7 @@ const Cart = () => {
           </p>
           <Link to={"/"}>
             <button className="ir-a-tienda">
-              <i class="bx bx-left-arrow-alt"></i>Ir a la tienda
+              <i className="bx bx-left-arrow-alt"></i>Ir a la tienda
             </button>
           </Link>
         </div>
@@ -89,7 +89,7 @@ const Cart = () => {
                   className="btn-eliminar"
                   onClick={() => RemoveItem(item.id)}
                 >
-                  <i class="bx bx-trash"></i>
+                  <i className="bx bx-trash"></i>
                   <span>Eliminar</span>
                 </button>
               </div>
@@ -108,7 +108,7 @@ const Cart = () => {
           <form className="formulario-orden" action="post">
             <h3>Completá con tus datos</h3>
             <div>
-              <i class="bx bxs-user"></i>
+              <i className="bx bxs-user"></i>
               <input
                 value={order.buyer.name}
                 required
@@ -120,7 +120,7 @@ const Cart = () => {
               />
             </div>
             <div>
-              <i class="bx bx-envelope"></i>
+              <i className="bx bx-envelope"></i>
               <input
                 value={order.buyer.email}
                 required
@@ -132,7 +132,7 @@ const Cart = () => {
               />
             </div>
             <div>
-              <i class="bx bxs-phone"></i>
+              <i className="bx bxs-phone"></i>
               <input
                 value={order.buyer.phone}
                 required
@@ -144,7 +144,7 @@ const Cart = () => {
               />
             </div>
             <div>
-              <i class="bx bxs-map"></i>
+              <i className="bx bxs-map"></i>
               <input
                 value={order.buyer.direccion}
                 required

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <footer>
+return (
+  <footer>
       <ul className="indice-redes">
         <a
           target="_blank"
@@ -28,5 +28,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
